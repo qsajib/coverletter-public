@@ -16,56 +16,119 @@
 % Keep this file as the canonical source for the public cover letter.
 % ============================================================
 %
-\documentclass[11pt]{letter}
+\documentclass[11pt]{article}
 
-% --------------------------------------------------------------------
-% Packages
-% --------------------------------------------------------------------
-
-\usepackage{microtype}
+% ----------------------------------------------------------
+% Page geometry
+% ----------------------------------------------------------
 \usepackage[a4paper,
-  top=1in,
-  bottom=1in,
-  left=1.4in,
-  right=1.4in
+  top=1.1in,
+  bottom=1.1in,
+  left=1.3in,
+  right=1.3in
 ]{geometry}
-\usepackage{hyperref}
-\usepackage{metalogo}
+
+% ----------------------------------------------------------
+% Fonts
+% ----------------------------------------------------------
 \usepackage{fontspec}
-\defaultfontfeatures{Ligatures=TeX}
-\setsansfont[Numbers=Lining]{Libertinus Sans}
-\setmonofont[Scale=MatchLowercase]{Libertinus Mono}
+\setsansfont[Ligatures=TeX]{Libertinus Sans}
 \renewcommand{\familydefault}{\sfdefault}
 
-% --------------------------------------------------------------------
-% Sender information
-% --------------------------------------------------------------------
+% ----------------------------------------------------------
+% General formatting
+% ----------------------------------------------------------
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{xcolor}
+\usepackage{hyperref}
 
-\signature{%
-Md Qutub Uddin Sajib\\
-\href{mailto:qsajib71@gmail.com}{qsajib71@gmail.com}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.70em}
+\pagestyle{empty}
 
-\address{}
+% ----------------------------------------------------------
+% Colors and links
+% Keep these consistent with the CV.
+% ----------------------------------------------------------
+\definecolor{highlight}{RGB}{73,124,56}
+\definecolor{url}{RGB}{80,80,80}
 
-% --------------------------------------------------------------------
-% Document
-% --------------------------------------------------------------------
+\hypersetup{
+  colorlinks=true,
+  urlcolor=url,
+  linkcolor=highlight
+}
 
+\usepackage{academicons}% Google scholar icon
+\RequirePackage{fontawesome5}
+
+\def\myname{Md Qutub Uddin Sajib}
+\def\myaddresspublic{Dhaka, Bangladesh}
+
+% ----------------------------------------------------------
+% Header helpers
+% ----------------------------------------------------------
+\newcommand{\contactsep}{\enspace\textperiodcentered\enspace}
+
+% ==========================================================
 \begin{document}
 
-\begin{letter}{%
-Hiring Committee\\
-Department\\
-University}
+% ----------------------------------------------------------
+% Header
+% ----------------------------------------------------------
 
-\opening{Dear Members of the Search Committee,}
+\noindent
+\begin{center}
+  {\LARGE MD QUTUB UDDIN SAJIB, Ph.D.}\\
+  {\footnotesize \color{highlight}Environmental Scientist\contactsep Publishing Professional}
+
+{\scriptsize
+{\color{url}\myaddresspublic}%
+  \\
+  {\color{url}%
+    \faIcon{envelope}\ 
+    \href{mailto:qsajib71@gmail.com}{qsajib71@gmail.com}%
+    \contactsep
+    \faIcon{github-square}\ 
+  \href{https://github.com/qsajib}{GitHub}%
+  \contactsep
+  \faLinkedin\
+  \href{https://www.linkedin.com/in/md-qutub-uddin-sajib}{LinkedIn}%
+  \contactsep
+  \aiGoogleScholarSquare\ 
+  \href{https://scholar.google.com/citations?user=8kXG-uAAAAAJ}{Google Scholar}%
+  }}
+\end{center}%
+
+\vspace{0.55em}
+
+{\color{highlight}\hrule height 0.8pt}
+
+\vspace{1.0em}
+
+% ==========================================================
+% Date and recipient
+% ==========================================================
+
+\normalsize
+\begin{flushright}
+  \today
+\end{flushright}
+
+\vspace{0.25em}
+
+{Hiring Committee}\\[0.5em]
+Department\\
+University\\
+City, State/Country
+
+\vspace{1.25em}
+
+Dear Members of the Search Committee,
 
 % --------------------------------------------------------------------
 % Opening
-%
-% Introduce yourself.
-% State the purpose of the letter.
-% Summarize your background in one or two sentences.
 % --------------------------------------------------------------------
 
 As an environmental scientist, my work combines remote sensing,
@@ -78,23 +141,12 @@ at Mathematical Sciences Publishers. I am now seeking a postdoctoral
 opportunity to apply my interdisciplinary background to collaborative
 environmental research.
 
-
 % --------------------------------------------------------------------
 % Academic Background and Research
-%
-% Ph.D. in Environmental Sciences and Engineering.
-% Research areas.
-% --------------------------------------------------------------------
-% Dissertation.
-% Remote sensing.
-% GIS.
-% Environmental modelling.
-% Scientific computing.
-% Publication(s).
 % --------------------------------------------------------------------
 
 During my doctoral research, I investigated environmental processes
-using satellite remote sensing, geographic information systems (GIS),
+using satellite remote sensing, GIS,
 and quantitative data analysis. My work focused on the estimation of
 land surface temperature from Landsat 8 imagery, including a
 comparative evaluation of multiple retrieval algorithms. Through this
@@ -103,15 +155,8 @@ spatial analysis, and scientific computing using R. The work
 culminated in a peer-reviewed publication and strengthened my interest
 in reproducible, data-driven environmental research.
 
-
 % --------------------------------------------------------------------
 % Professional Experience
-%
-% Mathematical Sciences Publishers.
-% Scholarly publishing.
-% LaTeX.
-% Software development.
-% Workflow improvement.
 % --------------------------------------------------------------------
 
 At Mathematical Sciences Publishers, I contributed to scholarly publishing
@@ -123,14 +168,8 @@ production software improvements. This experience strengthened my
 attention to detail, technical communication skills, and appreciation
 for reproducible, high-quality scientific publishing.
 
-
 % --------------------------------------------------------------------
 % Current Research Interests
-%
-% Environmental data science.
-% Reproducible research.
-% Open-source software.
-% Future research direction.
 % --------------------------------------------------------------------
 
 Today, my research interests lie at the intersection of environmental
@@ -140,13 +179,8 @@ analysis. I am particularly interested in collaborative research
 addressing complex environmental challenges through quantitative,
 reproducible methods.
 
-
 % --------------------------------------------------------------------
 % Closing
-%
-% Interest in the position.
-% Thank the committee.
-% Availability for interview.
 % --------------------------------------------------------------------
 
 I would welcome the opportunity to contribute my interdisciplinary
@@ -155,9 +189,8 @@ scholarly publishing to your research program. I look forward to
 discussing how my experience and research interests could contribute
 to your work.
 
+\medskip
+Sincerely,
 
-\closing{Sincerely,}
-
-\end{letter}
-
+\myname
 \end{document}
